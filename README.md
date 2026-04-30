@@ -1,30 +1,114 @@
-# food-ordering-agent
+# Food Ordering Agent
 
-Welcome to your new [Mastra](https://mastra.ai/) project! We're excited to see what you'll build.
+An AI-powered food ordering assistant for **Mama Asante's Chop Bar**, a Ghanaian restaurant in East Legon, Accra. Built with [Mastra](https://mastra.ai/) and [Paystack](https://paystack.com/) for end-to-end ordering and payment.
 
-## Getting Started
+Customers can browse the menu, place orders in natural language, and pay by card or Mobile Money (MTN MoMo, Vodafone Cash).
 
-Start the development server:
+## How it works
 
-```shell
+1. **Browse**: Customer asks to see the menu or search for a specific dish
+2. **Order**: Agent confirms items, sizes, and total in GHS
+3. **Pay**: Agent generates a Paystack payment link (card or Mobile Money)
+4. **Confirm**: Agent verifies the payment and confirms the order
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) `>=22.13.0`
+- [pnpm](https://pnpm.io/) `>=10`. Install with `npm install -g pnpm`
+- A **Google AI API key**. The agent uses `google/gemma-4-31b-it`. Get one at [aistudio.google.com](https://aistudio.google.com/app/apikey)
+- A **Paystack secret key** (test mode works). Get one from your [Paystack Dashboard](https://dashboard.paystack.com/#/settings/developer)
+
+## Setup
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/PaystackOSS/food-ordering-agent.git
+cd food-ordering-agent
+```
+
+**2. Install dependencies**
+
+```bash
+pnpm install
+```
+
+**3. Configure environment variables**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and fill in your keys:
+
+```env
+GOOGLE_GENERATIVE_AI_API_KEY=your_google_ai_api_key
+PAYSTACK_TEST_KEY=your_paystack_secret_key
+```
+
+**4. Start the development server**
+
+```bash
 pnpm run dev
 ```
 
-Open [http://localhost:4111](http://localhost:4111) in your browser to access [Mastra Studio](https://mastra.ai/docs/studio/overview). It provides an interactive UI for building and testing your agents, along with a REST API that exposes your Mastra application as a local service. This lets you start building without worrying about integration right away.
+Open [http://localhost:4111](http://localhost:4111) in your browser to access **Mastra Studio**, an interactive UI for chatting with the agent, inspecting traces, and testing tools.
 
-You can start editing files inside the `src/mastra` directory. The development server will automatically reload whenever you make changes.
+## Project structure
+
+```
+src/
+├── data/
+│   └── menu.json                     # Restaurant menu (items, sizes, GHS prices)
+└── mastra/
+    ├── index.ts                      # Mastra configuration and entry point
+    ├── agents/
+    │   └── order-agent.ts            # The food ordering agent definition
+    ├── tools/
+    │   ├── view-menu.ts              # Returns the full menu organised by category
+    │   ├── search-menu.ts            # Searches menu by name, category, or description
+    │   ├── initiate-payment.ts       # Creates a Paystack transaction and returns a payment link
+    │   └── verify-payment.ts         # Verifies a Paystack transaction by reference
+    └── prompts/
+        └── ordering-instructions.ts  # System prompt for the ordering agent
+```
+
+## Available tools
+
+| Tool | Description |
+|---|---|
+| `view_menu` | Returns the complete menu grouped by category with price ranges |
+| `search_menu` | Searches for dishes by name, category, or description |
+| `initiate_payment` | Takes a customer email and total (GHS) and returns a Paystack payment link |
+| `verify_payment` | Verifies a payment using the Paystack transaction reference |
+
+## Customising the menu
+
+Edit `src/data/menu.json` to update dishes, sizes, and prices. Each item follows this shape:
+
+```json
+{
+  "id": "rice-jollof",
+  "name": "Jollof Rice",
+  "category": "Rice Dishes",
+  "description": "Smoky party-style jollof rice cooked with tomatoes, peppers, and spices.",
+  "sizes": [
+    { "label": "Small", "price_ghs": 25 },
+    { "label": "Regular", "price_ghs": 35 },
+    { "label": "Large", "price_ghs": 50 }
+  ],
+  "available": true
+}
+```
+
+## Other commands
+
+```bash
+pnpm run build   # Build a production-ready server
+pnpm run start   # Start the production server (after build)
+```
 
 ## Learn more
 
-To learn more about Mastra, visit our [documentation](https://mastra.ai/docs/). Your bootstrapped project includes example code for [agents](https://mastra.ai/docs/agents/overview), [tools](https://mastra.ai/docs/agents/using-tools), [workflows](https://mastra.ai/docs/workflows/overview), [scorers](https://mastra.ai/docs/evals/overview), and [observability](https://mastra.ai/docs/observability/overview).
-
-If you're new to AI agents, check out our [course](https://mastra.ai/learn) and [YouTube videos](https://youtube.com/@mastra-ai). You can also join our [Discord](https://discord.gg/BTYqqHKUrf) community to get help and share your projects.
-
-## Deploy to the Mastra platform
-
-The [Mastra platform](https://projects.mastra.ai) provides two products for deploying and managing AI applications built with the Mastra framework:
-
-- **Studio**: A hosted visual environment for testing agents, running workflows, and inspecting traces
-- **Server**: A production deployment target that runs your Mastra application as an API server
-
-Learn more in the [Mastra platform documentation](https://mastra.ai/docs/mastra-platform/overview).
+- [Mastra documentation](https://mastra.ai/docs/)
+- [Paystack documentation](https://paystack.com/docs/)
