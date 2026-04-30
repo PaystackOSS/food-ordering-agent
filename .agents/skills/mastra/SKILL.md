@@ -155,7 +155,7 @@ Example model strings:
 
 - `"openai/gpt-5.4"`
 - `"anthropic/claude-sonnet-4-5"`
-- `"google/gemini-2.5-pro"`
+- `"google/gemma-4-31b-it"`
 
 ## When you see errors
 

@@ -29,6 +29,12 @@ importers:
       '@mastra/observability':
         specifier: ^1.9.1
         version: 1.9.1(@mastra/core@1.25.0(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.1.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod-to-json-schema@3.25.2(zod@4.3.6))(zod@4.3.6))(@standard-community/standard-openapi@0.2.9(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.1.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod-to-json-schema@3.25.2(zod@4.3.6))(zod@4.3.6))(@standard-schema/spec@1.1.0)(openapi-types@12.1.3)(zod@4.3.6))(@types/json-schema@7.0.15)(openapi-types@12.1.3)(zod@4.3.6))
+      '@paystack/paystack-sdk':
+        specifier: 1.2.1-beta.2
+        version: 1.2.1-beta.2
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
       zod:
         specifier: ^4.3.6
         version: 4.3.6
@@ -617,6 +623,9 @@ packages:
   '@optimize-lodash/transform@3.0.6':
     resolution: {integrity: sha512-9+qMSaDpahC0+vX2ChM46/ls6a5Ankqs6RTLrHSaFpm7o1mFanP82e+jm9/0o5D660ueK8dWJGPCXQrBxBNNWA==}
     engines: {node: '>= 12'}
+
+  '@paystack/paystack-sdk@1.2.1-beta.2':
+    resolution: {integrity: sha512-u21ugA56+N+4Q6Lvkl/WtWGWbkrGcuavFUJIa0ykc68lbjnSrQcdSFedK6GzKMQouMGOsoj1IVeywxcb6jmC0A==}
 
   '@pinojs/redact@0.4.0':
     resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
@@ -3473,6 +3482,8 @@ snapshots:
     dependencies:
       estree-walker: 2.0.2
       magic-string: 0.30.21
+
+  '@paystack/paystack-sdk@1.2.1-beta.2': {}
 
   '@pinojs/redact@0.4.0': {}
 

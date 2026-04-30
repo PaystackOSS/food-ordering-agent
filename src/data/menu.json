@@ -1,0 +1,439 @@
+{
+  "restaurant": {
+    "name": "Mama Asante's Chop Bar",
+    "location": "East Legon, Accra",
+    "currency": "GHS"
+  },
+  "menu": [
+    {
+      "id": "rice-jollof",
+      "name": "Jollof Rice",
+      "category": "Rice Dishes",
+      "description": "Smoky party-style jollof rice cooked with tomatoes, peppers, and spices.",
+      "sizes": [
+        {
+          "label": "Small",
+          "price_ghs": 25
+        },
+        {
+          "label": "Regular",
+          "price_ghs": 35
+        },
+        {
+          "label": "Large",
+          "price_ghs": 50
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "rice-fried",
+      "name": "Fried Rice",
+      "category": "Rice Dishes",
+      "description": "Stir-fried rice with mixed vegetables, eggs, and seasoning.",
+      "sizes": [
+        {
+          "label": "Small",
+          "price_ghs": 25
+        },
+        {
+          "label": "Regular",
+          "price_ghs": 35
+        },
+        {
+          "label": "Large",
+          "price_ghs": 50
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "waakye",
+      "name": "Waakye",
+      "category": "Rice Dishes",
+      "description": "Rice and beans cooked together with dried sorghum leaves, served with shito and spaghetti.",
+      "sizes": [
+        {
+          "label": "Small",
+          "price_ghs": 20
+        },
+        {
+          "label": "Regular",
+          "price_ghs": 30
+        },
+        {
+          "label": "Large",
+          "price_ghs": 45
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "banku",
+      "name": "Banku",
+      "category": "Swallows",
+      "description": "Fermented corn and cassava dough. Served with a soup or stew of your choice.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 10
+        },
+        {
+          "label": "Large",
+          "price_ghs": 15
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "fufu",
+      "name": "Fufu",
+      "category": "Swallows",
+      "description": "Pounded cassava and plantain. Served with light soup, palm nut soup, or groundnut soup.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 15
+        },
+        {
+          "label": "Large",
+          "price_ghs": 22
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "kenkey",
+      "name": "Kenkey",
+      "category": "Swallows",
+      "description": "Fermented corn dumpling wrapped in corn husks. Pairs well with fried fish and pepper sauce.",
+      "sizes": [
+        {
+          "label": "One ball",
+          "price_ghs": 8
+        },
+        {
+          "label": "Two balls",
+          "price_ghs": 15
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "soup-light",
+      "name": "Light Soup",
+      "category": "Soups and Stews",
+      "description": "Clear tomato-based soup with meat or fish, seasoned with ginger, garlic, and peppers.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 20
+        },
+        {
+          "label": "Large",
+          "price_ghs": 30
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "soup-palmnut",
+      "name": "Palm Nut Soup",
+      "category": "Soups and Stews",
+      "description": "Rich, creamy soup made from palm fruit extract with smoked fish and seasoning.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 25
+        },
+        {
+          "label": "Large",
+          "price_ghs": 35
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "soup-groundnut",
+      "name": "Groundnut Soup",
+      "category": "Soups and Stews",
+      "description": "Smooth peanut-based soup with tomatoes, peppers, and your choice of protein.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 25
+        },
+        {
+          "label": "Large",
+          "price_ghs": 35
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "stew-kontomire",
+      "name": "Kontomire Stew",
+      "category": "Soups and Stews",
+      "description": "Cocoyam leaf stew cooked with palm oil, smoked fish, and egusi. A Ghanaian classic.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 20
+        },
+        {
+          "label": "Large",
+          "price_ghs": 30
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "protein-tilapia-grilled",
+      "name": "Grilled Tilapia",
+      "category": "Proteins",
+      "description": "Whole tilapia marinated in pepper sauce and grilled over open coals.",
+      "sizes": [
+        {
+          "label": "Medium",
+          "price_ghs": 45
+        },
+        {
+          "label": "Large",
+          "price_ghs": 65
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "protein-tilapia-fried",
+      "name": "Fried Tilapia",
+      "category": "Proteins",
+      "description": "Crispy whole tilapia seasoned and deep fried. Served with shito on request.",
+      "sizes": [
+        {
+          "label": "Medium",
+          "price_ghs": 40
+        },
+        {
+          "label": "Large",
+          "price_ghs": 60
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "protein-chicken-grilled",
+      "name": "Grilled Chicken",
+      "category": "Proteins",
+      "description": "Half chicken marinated in local spices and grilled to order.",
+      "sizes": [
+        {
+          "label": "Quarter",
+          "price_ghs": 30
+        },
+        {
+          "label": "Half",
+          "price_ghs": 55
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "protein-beef",
+      "name": "Beef",
+      "category": "Proteins",
+      "description": "Seasoned beef pieces, stewed until tender.",
+      "sizes": [
+        {
+          "label": "Regular",
+          "price_ghs": 25
+        },
+        {
+          "label": "Large",
+          "price_ghs": 40
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "protein-egg",
+      "name": "Boiled Egg",
+      "category": "Proteins",
+      "description": "Hard boiled egg. A simple and popular addition to any plate.",
+      "sizes": [
+        {
+          "label": "One",
+          "price_ghs": 5
+        },
+        {
+          "label": "Two",
+          "price_ghs": 9
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "sides-kelewele",
+      "name": "Kelewele",
+      "category": "Sides and Extras",
+      "description": "Spiced fried ripe plantain cubes. Flavoured with ginger, pepper, and cloves.",
+      "sizes": [
+        {
+          "label": "Small",
+          "price_ghs": 15
+        },
+        {
+          "label": "Regular",
+          "price_ghs": 22
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "sides-fried-plantain",
+      "name": "Fried Plantain",
+      "category": "Sides and Extras",
+      "description": "Plain fried ripe plantain slices. Sweet and lightly crispy.",
+      "sizes": [
+        {
+          "label": "Small",
+          "price_ghs": 12
+        },
+        {
+          "label": "Regular",
+          "price_ghs": 18
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "sides-shito",
+      "name": "Shito",
+      "category": "Sides and Extras",
+      "description": "Ghanaian black pepper sauce made with dried fish, shrimp, and chillies.",
+      "sizes": [
+        {
+          "label": "Portion",
+          "price_ghs": 5
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "sides-coleslaw",
+      "name": "Coleslaw",
+      "category": "Sides and Extras",
+      "description": "Creamy coleslaw with shredded cabbage and carrots.",
+      "sizes": [
+        {
+          "label": "Portion",
+          "price_ghs": 8
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-water",
+      "name": "Water (Sachet)",
+      "category": "Drinks",
+      "description": "Pure water sachet.",
+      "sizes": [
+        {
+          "label": "500ml",
+          "price_ghs": 2
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-water-bottle",
+      "name": "Bottled Water",
+      "category": "Drinks",
+      "description": "Still mineral water.",
+      "sizes": [
+        {
+          "label": "500ml",
+          "price_ghs": 7
+        },
+        {
+          "label": "1.5L",
+          "price_ghs": 12
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-sobolo",
+      "name": "Sobolo",
+      "category": "Drinks",
+      "description": "Chilled hibiscus flower drink sweetened with ginger and cloves. Made in-house.",
+      "sizes": [
+        {
+          "label": "Cup",
+          "price_ghs": 8
+        },
+        {
+          "label": "Bottle",
+          "price_ghs": 15
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-malta",
+      "name": "Malta Guinness",
+      "category": "Drinks",
+      "description": "Chilled non-alcoholic malt drink.",
+      "sizes": [
+        {
+          "label": "330ml",
+          "price_ghs": 10
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-alvaro",
+      "name": "Alvaro",
+      "category": "Drinks",
+      "description": "Sparkling pear or pineapple flavoured drink.",
+      "sizes": [
+        {
+          "label": "330ml",
+          "price_ghs": 10
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-coke",
+      "name": "Coca-Cola",
+      "category": "Drinks",
+      "description": "Chilled Coca-Cola.",
+      "sizes": [
+        {
+          "label": "330ml",
+          "price_ghs": 8
+        },
+        {
+          "label": "500ml",
+          "price_ghs": 12
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "drink-asaana",
+      "name": "Asaana",
+      "category": "Drinks",
+      "description": "Chilled fermented corn drink. Lightly sweet and refreshing.",
+      "sizes": [
+        {
+          "label": "Cup",
+          "price_ghs": 6
+        }
+      ],
+      "available": true
+    }
+  ]
+}

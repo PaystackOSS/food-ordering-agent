@@ -160,14 +160,14 @@ export const weatherAgent = new Agent({
 
       Use the weatherTool to fetch current weather data.
 `,
-  model: "google/gemini-2.5-pro",
+  model: "google/gemma-4-31b-it",
   tools: { weatherTool },
 });
 ```
 
 **Note:** Model format is `"provider/model-name"`. Examples:
 
-- `"google/gemini-2.5-pro"`
+- `"google/gemma-4-31b-it"`
 - `"openai/gpt-5.4"`
 - `"anthropic/claude-sonnet-4-5"`
 
